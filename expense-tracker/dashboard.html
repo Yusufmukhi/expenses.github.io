@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Expense Tracker — Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-left">
+      <div class="brand-sm">ExpenseTracker</div>
+      <div id="welcomeUser" class="welcome">Hi, User</div>
+    </div>
+    <div class="nav-right">
+      <a href="dashboard.html" class="nav-link">Home</a>
+      <a href="#" class="nav-link" id="logoutBtn">Logout</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <aside class="sidebar">
+      <h3>Dashboard</h3>
+      <ul class="side-menu">
+        <li><button class="side-btn" onclick="openSection('overview')">Overview</button></li>
+        <li><button class="side-btn" onclick="openSection('expenses')">Expenses</button></li>
+        <li><button class="side-btn" onclick="openSection('income')">Income</button></li>
+        <li><button class="side-btn" onclick="openSection('savings')">Savings</button></li>
+        <li><button class="side-btn" onclick="openSection('loan')">Loan</button></li>
+      </ul>
+    </aside>
+
+    <section class="main-area">
+      <section id="overviewSection" class="card-grid">
+        <div class="card stat">
+          <div class="stat-title">Net Worth</div>
+          <div class="stat-value" id="netWorth">₹0</div>
+        </div>
+        <div class="card stat">
+          <div class="stat-title">Current Money</div>
+          <div class="stat-value" id="currentMoney">₹0</div>
+        </div>
+        <div class="card stat">
+          <div class="stat-title">Total Income</div>
+          <div class="stat-value" id="totalIncome">₹0</div>
+        </div>
+        <div class="card stat">
+          <div class="stat-title">Total Expenses</div>
+          <div class="stat-value" id="totalExpenses">₹0</div>
+        </div>
+        <div class="card stat">
+          <div class="stat-title">Total Savings</div>
+          <div class="stat-value" id="totalSavings">₹0</div>
+        </div>
+      </section>
+
+      <section id="sectionContent" class="content-area">
+        <!-- dynamic content loads here -->
+      </section>
+    </section>
+  </main>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>
